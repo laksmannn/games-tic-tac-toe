@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Solitreo&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-purple: #6649c2;
+  --color-purple-dark: #332167;
+  --color-red: #eb1650;
+  --color-yellow: #ffd031;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    var(--color-purple),
+    var(--color-purple-dark)
+  );
+  color: white;
+  padding: 12px;
+  font-family: "Fredoka One", cursive;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+  gap: 20px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.info .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 16px;
+}
+.info .profile span {
+  color: silver;
+}
+
+/* view right */
+.game-arena {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.game-info {
+  background: var(--color-purple-dark);
+  padding: 16px;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 16px;
+  justify-content: space-around;
+  align-items: center;
+}
+.game-arena .game-info .box-player {
+  border: 1px solid white;
+  padding: 12px;
+  border-radius: 16px;
+}
+.game-arena .box-player .player-label.x {
+  color: var(--color-red);
+}
+.game-arena .box-player .player-name {
+  font-size: 12px;
+}
+.game-arena .box-player .turn {
+  font-size: 12px;
+  font-family: monospace;
+}
+
+.game-arena .box-player .player-label.o {
+  color: var(--color-yellow);
+}
+.btn {
+  border: none;
+  padding: 12px 16px;
+  border-radius: 16px;
+  background: white;
+  color: var(--color-red);
+  font-family: "Fredoka One", cursive;
+  cursor: pointer;
+}
+
+.game-play {
+  margin-top: 16px;
+  background: var(--color-purple);
+  padding: 16px;
+  border-radius: 16px;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(3, minmax(80px, 200px));
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+.game-play .btn-tic-tac-toe {
+  aspect-ratio: 1;
+  border-radius: 16px;
+  background: var(--color-purple-dark);
+  border: none;
+  font-size: 80px;
+  font-family: "Fredoka One", cursive;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.game-play .btn-tic-tac-toe.x {
+  color: var(--color-red);
+}
+.game-play .btn-tic-tac-toe.o {
+  color: var(--color-yellow);
+}
+.game-play .btn-tic-tac-toe:hover {
+  transform: translateY(-3px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 15px 20px #231059;
+  -webkit-transform: translateY(-3px);
+  -moz-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  -o-transform: translateY(-3px);
+}
+
+/* small device */
+@media (width < 400px) {
+  .game-play .btn-tic-tac-toe {
+    font-size: 20px;
+  }
+}
